@@ -9,7 +9,7 @@
 #bios: /media/RG-350/bios
 
 #Adding global variables for the default directories
-$save_folder=/media/RG-350/saves      #Golbal Save Folder
+save_folder=/media/RG-350/saves      #Golbal Save Folder
 
 #Template with description
 #Platform Name - Emulator name
