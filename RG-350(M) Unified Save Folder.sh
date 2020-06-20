@@ -3,11 +3,6 @@
 #This scripts is used to move all the supported emulator save files and states into a single folder in your SD card and maintain them there by smilinking the needed folders inside a single one (see default directories).
 #The SD Card must be renamed into RG-350, otherwise you have to fix the script.
 
-#- Default directories -
-#saves/states: /media/RG-350/saves
-#roms: /media/RG-350/roms
-#bios: /media/RG-350/bios
-
 #Adding global variables for the default directories
 save_folder=/media/RG-350/saves      #Golbal Save Folder
 bios_folder=/media/RG-350/bios       #Global BIOS Folder
@@ -16,10 +11,10 @@ bios_folder=/media/RG-350/bios       #Global BIOS Folder
 #Platform Name - Emulator name
 
 #Original_Folder=/media/data/local/home/.FOO	#initalizing saves folder
-#mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
+#mv $Original_Folder $Original_Folder"_bak"		#renaming the folder in the folder_bak
 #ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
-#mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
-#rm $Original_Folder+"_bak"						#deleting the old backup folder
+#mv $Original_Folder"_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+#rm $Original_Folder"_bak"						#deleting the old backup folder
 
 ### That's enough gabbing, the script is starting.
 
@@ -29,25 +24,25 @@ bios_folder=/media/RG-350/bios       #Global BIOS Folder
 #GBC: gambatte.opk
 
 #saves
-Original_Folder=/media/data/local/home/.gambatte/saves		#initalizing saves folder
-mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
-ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
-mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
-rm $Original_Folder+"_bak"						#deleting the old backup folder
+Original_Folder=/media/data/local/home/.gambatte/saves	#initalizing saves folder
+mv $Original_Folder $Original_Folder"_bak"				#renaming the folder in the folder_bak
+ln -s $save_folder $Original_Folder 					#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $Original_Folder"_bak"/* $Original_Folder			#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $Original_Folder"_bak"								#deleting the old backup folder
 
 #bios
 original_bios=/media/data/local/home/.gambatte/bios		#initalizing bios folder
-mv $original_bios $original_bios+"_bak"	#renaming the folder in the folder_bak
-ln -s $bios_folder original_bios 			#creating a symbolic link with the name of the original folder pointing at the gloabl bios folder
-mv original_bios"+_bak"/* original_bios	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal bios folder
-rm original_bios+"_bak"						#deleting the old backup folder
+mv $original_bios $original_bios"_bak"					#renaming the folder in the folder_bak
+ln -s $bios_folder $original_bios 						#creating a symbolic link with the name of the original folder pointing at the gloabl bios folder
+mv $original_bios"_bak"/* $original_bios					#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal bios folder
+rm $original_bios"_bak"									#deleting the old backup folder
 
 #Game Boy Advance - ReGBA
-Original_Folder=/media/data/local/home/.gpsp	#initalizing saves folder
-mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
-ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
-mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
-rm $Original_Folder+"_bak"						#deleting the old backup folder
+Original_Folder=/media/data/local/home/.gpsp			#initalizing saves folder
+mv $Original_Folder $Original_Folder"_bak"				#renaming the folder in the folder_bak
+ln -s $save_folder $Original_Folder 					#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $Original_Folder"_bak"/* $Original_Folder			#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $Original_Folder"_bak"								#deleting the old backup folder
 #Changing file extension from .srm to .sav, ReGBA is not supporting .srm files
 cd $save_folder
 for x in *.srm; do mv "$x" "${x%.srm}.sav"; done
