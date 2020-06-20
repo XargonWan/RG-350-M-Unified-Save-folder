@@ -15,7 +15,6 @@ $save_folder=/media/RG-350/saves      #Golbal Save Folder
 #Platform Name - Emulator name
 
 #$Original_Folder=/media/data/local/home/.FOO	#initalizing saves folder
-
 #mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
 #ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
 #mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
@@ -24,10 +23,14 @@ $save_folder=/media/RG-350/saves      #Golbal Save Folder
 ### That's enough gabbing, the script is starting.
 
 #Game Boy Advance - ReGBA
-mv /media/data/local/home/.gpsp /media/data/local/home/.gpsp_bak
-ln -s /media/RG-350/saves /media/data/local/home/.gpsp
-mv  /media/data/local/home/.gpsp_bak/* /media/data/local/home/.gpsp/
-rm /media/data/local/home/.gpsp_bak
+$Original_Folder=/media/data/local/home/.gpsp	#initalizing saves folder
+mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
+ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $Original_Folder+"_bak"						#deleting the old backup folder
+#Changing file extension from .srm to .sav, ReGBA is not supporting .srm files
+cd $save_folder
+for x in *.srm; do mv "$x" "${x%.srm}.sav"; done
 #Seems like there is no BIOS folder
 
 #Sega Mega Drive (Genesis),Mega CD, Master System, Game Gear & SG-1000 - Genesis Plus GX
