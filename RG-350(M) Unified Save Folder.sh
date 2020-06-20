@@ -10,6 +10,7 @@
 
 #Adding global variables for the default directories
 save_folder=/media/RG-350/saves      #Golbal Save Folder
+bios_folder=/media/RG-350/bios       #Global BIOS Folder
 
 #Template with description
 #Platform Name - Emulator name
@@ -21,6 +22,25 @@ save_folder=/media/RG-350/saves      #Golbal Save Folder
 #rm $Original_Folder+"_bak"						#deleting the old backup folder
 
 ### That's enough gabbing, the script is starting.
+
+#Gameboy/Color - Gambatte
+#both versions are saving in the same .gambatte folder
+#GB: gambatte-gcw0-r572u3-20190718-004431.opk
+#GBC: gambatte.opk
+
+#saves
+Original_Folder=/media/data/local/home/.gambatte/saves		#initalizing saves folder
+mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
+ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $Original_Folder+"_bak"						#deleting the old backup folder
+
+#bios
+original_bios=/media/data/local/home/.gambatte/bios		#initalizing bios folder
+mv $original_bios $original_bios+"_bak"	#renaming the folder in the folder_bak
+ln -s $bios_folder original_bios 			#creating a symbolic link with the name of the original folder pointing at the gloabl bios folder
+mv original_bios"+_bak"/* original_bios	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal bios folder
+rm original_bios+"_bak"						#deleting the old backup folder
 
 #Game Boy Advance - ReGBA
 Original_Folder=/media/data/local/home/.gpsp	#initalizing saves folder
