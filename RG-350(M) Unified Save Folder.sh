@@ -14,7 +14,7 @@ save_folder=/media/RG-350/saves      #Golbal Save Folder
 #Template with description
 #Platform Name - Emulator name
 
-#$Original_Folder=/media/data/local/home/.FOO	#initalizing saves folder
+#Original_Folder=/media/data/local/home/.FOO	#initalizing saves folder
 #mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
 #ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
 #mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
