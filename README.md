@@ -7,3 +7,6 @@ This scripts is used to move all the supported emulator save files and states in
 **Default directories**
 - roms: /media/RG-350/roms
 - saves/states: /media/RG-350/saves
+
+Useful sources:
+https://github.com/retrogamehandheld/OpenDingux
