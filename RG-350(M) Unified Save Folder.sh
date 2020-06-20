@@ -4,21 +4,24 @@
 #The SD Card must be renamed into RG-350, otherwise you have to fix the script.
 
 #- Default directories -
-#roms: /media/RG-350/roms
 #saves/states: /media/RG-350/saves
-#bios: 
+#roms: /media/RG-350/roms
+#bios: /media/RG-350/bios
 
-#Template
-#saves
-#mv /media/data/local/home/.FOO /media/data/local/home/.FOO_bak
-#ln -s /media/RG-350/saves /media/data/local/home/.FOO
-#mv  /media/data/local/home/.FOO_bak/* /media/data/local/home/.FOO/
-#rm /media/data/local/home/.FOO_bak
-#bios
-#mv /media/data/local/home/.FOO /media/data/local/home/.FOO_bak
-#ln -s /media/RG-350/saves /media/data/local/home/.FOO
-#mv  /media/data/local/home/.FOO_bak/* /media/data/local/home/.FOO/
-#rm /media/data/local/home/.FOO_bak
+#Adding global variables for the default directories
+$save_folder=/media/RG-350/saves      #Golbal Save Folder
+
+#Template with description
+#Platform Name - Emulator name
+
+#$Original_Folder=/media/data/local/home/.FOO	#initalizing saves folder
+
+#mv $Original_Folder $Original_Folder+"_bak"	#renaming the folder in the folder_bak
+#ln -s $save_folder $Original_Folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+#mv $Original_Folder"+_bak"/* $Original_Folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+#rm $Original_Folder+"_bak"						#deleting the old backup folder
+
+### That's enough gabbing, the script is starting.
 
 #Game Boy Advance - ReGBA
 mv /media/data/local/home/.gpsp /media/data/local/home/.gpsp_bak
