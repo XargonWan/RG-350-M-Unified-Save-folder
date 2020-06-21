@@ -3,7 +3,7 @@ This script aims to create a single place where all the emulators are saving the
 
 This scripts is used to move all the supported emulator save files and states into a single folder in your SD card and maintain them there by symlinking the needed folders merging them into a single one (see default directories).
 
-The SD Card must be renamed into RG-350, otherwise you have to fix the script.
+The SD Card must be renamed into RG-350, otherwise you'll have to fix the script.
 
 **Default directories**
 - roms: /media/RG-350/roms
