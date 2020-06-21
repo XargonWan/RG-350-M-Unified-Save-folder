@@ -8,5 +8,10 @@ This scripts is used to move all the supported emulator save files and states in
 - roms: /media/RG-350/roms
 - saves/states: /media/RG-350/saves
 
+**Supported Emulators so far**
+- Gambatte
+- ReGBA
+- Genesis Plus GX
+
 Useful sources:
 https://github.com/retrogamehandheld/OpenDingux
