@@ -19,23 +19,18 @@ global_biosfolder=/media/RG-350/bios       #Global BIOS Folder
 ### That's enough gabbing, the script is starting.
 
 #Gameboy/Color - Gambatte
-#both versions are saving in the same .gambatte folder
-#GB: gambatte-gcw0-r572u3-20190718-004431.opk
-#GBC: gambatte.opk
-
 #saves
-original_folder=/media/data/local/home/.gambatte/saves	#initalizing saves folder
-mv $original_folder $original_folder"_bak"				#renaming the folder in the folder_bak
-ln -s $global_savefolder $original_folder 					#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
-mv $original_folder"_bak"/* $original_folder			#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
-rm $original_folder"_bak"								#deleting the old backup folder
-
+original_folder=/media/data/local/home/.gambatte/saves	#initalizing saves folder [don't put / in the end]
+mv $original_folder $original_folder"_bak"		#renaming the folder in the folder_bak
+ln -s $global_savefolder $original_folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $original_folder"_bak"/* $original_folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $original_folder"_bak"						#deleting the old backup folder
 #bios
-original_bios=/media/data/local/home/.gambatte/bios		#initalizing bios folder
-mv $original_bios $original_bios"_bak"					#renaming the folder in the folder_bak
-ln -s $global_biosfolder $original_bios 						#creating a symbolic link with the name of the original folder pointing at the gloabl bios folder
-mv $original_bios"_bak"/* $original_bios					#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal bios folder
-rm $original_bios"_bak"									#deleting the old backup folder
+original_folder=/media/data/local/home/.gambatte/bios	#initalizing saves folder [don't put / in the end]
+mv $original_folder $original_folder"_bak"		#renaming the folder in the folder_bak
+ln -s $global_savefolder $original_folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $original_folder"_bak"/* $original_folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $original_folder"_bak"						#deleting the old backup folder
 
 #Game Boy Advance - ReGBA
 original_folder=/media/data/local/home/.gpsp			#initalizing saves folder
