@@ -15,4 +15,5 @@ The SD Card must be renamed into RG-350, otherwise you'll have to fix the script
 - Genesis Plus GX
 
 Useful sources:
+https://github.com/SeongGino/RetroGame350-AppRepo
 https://github.com/retrogamehandheld/OpenDingux
