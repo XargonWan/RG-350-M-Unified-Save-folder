@@ -13,6 +13,7 @@ The SD Card must be renamed into RG-350, otherwise you'll have to fix the script
 - Gambatte
 - ReGBA
 - Genesis Plus GX
+- Picodrive
 
 **Useful sources**
 
