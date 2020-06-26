@@ -104,8 +104,8 @@ rm $original_folder"_bak"						#deleting the old backup folder
 #Tomb Raider I - OpenLara
 #Template v0.3
 
-#original_folder=/media/data/local/home/.openlara	#initalizing saves folder [don't put / in the end]
-#mv $original_folder $original_folder"_bak"		#renaming the folder in the folder_bak
-#ln -s $global_savefolder $original_folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
-#mv $original_folder"_bak"/* $original_folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
-#rm $original_folder"_bak"						#deleting the old backup folder
+original_folder=/media/data/local/home/.openlara	#initalizing saves folder [don't put / in the end]
+mv $original_folder $original_folder"_bak"		#renaming the folder in the folder_bak
+ln -s $global_savefolder $original_folder 			#creating a symbolic link with the name of the original folder pointing at the gloabl save folder
+mv $original_folder"_bak"/* $original_folder	#moving all the files inside the backed up folder into the newly created folder, actually inside the golbal save folder
+rm $original_folder"_bak"						#deleting the old backup folder
