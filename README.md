@@ -10,6 +10,7 @@ The SD Card must be renamed into RG-350, otherwise you'll have to fix the script
 - saves/states: /media/RG-350/saves
 
 **Supported Emulators so far**
+- FCEUX
 - Gambatte
 - ReGBA
 - Genesis Plus GX
