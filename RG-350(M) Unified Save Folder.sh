@@ -31,6 +31,10 @@ rm -r $1"_bak"						#deleting the old backup folder
 
 ### That's enough gabbing, the script is starting.
 
+#Nintendo Entartainment System - FCEUX
+saves_symlink /media/data/local/home/.fceux/sav
+saves_symlink /media/data/local/home/.fceux/fcs
+
 #Gameboy/Color - Gambatte
 saves_symlink /media/data/local/home/.gambatte/saves
 bios_symlink /media/data/local/home/.gambatte/bios
