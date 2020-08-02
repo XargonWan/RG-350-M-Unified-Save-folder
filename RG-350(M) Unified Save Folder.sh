@@ -57,5 +57,8 @@ saves_symlink /media/data/local/home/.picodrive/brm
 saves_symlink /media/data/local/home/.picodrive/mds
 saves_symlink /media/data/local/home/.picodrive/srm
 
-#Tomb Raider I - OpenLara
-saves_symlink /media/data/local/home/.openlara
+#Tomb Raider I - OpenLara - This has to be done manually
+mv /media/data/local/home/.openlara /media/data/local/home/.openlara_bak
+ln -s /media/sdcard/saves/.openlara /media/data/local/home/.openlara
+mv /media/data/local/home/.openlara_bak/* /media/data/local/home/.openlara
+rm -r /media/data/local/home/.openlara_bak
