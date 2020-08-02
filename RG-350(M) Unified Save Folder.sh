@@ -41,7 +41,8 @@ bios_symlink /media/data/local/home/.gambatte/bios
 
 #Game Boy Advance - ReGBA
 saves_symlink /media/data/local/home/.gpsp
-cd $global_savefolder		#Changing file extension from .srm to .sav, ReGBA is not supporting .srm files
+cd $global_savefolder
+#Changing file extension from .srm to .sav, ReGBA is not supporting .srm files
 for x in *.srm; do mv "$x" "${x%.srm}.sav"; done
 
 #Sega Mega Drive (Genesis),Mega CD, Master System, Game Gear & SG-1000 - Genesis Plus GX
